@@ -1,0 +1,551 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Karla',sans-serif;
+overflow-x:hidden;
+background:#f7f7f7;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+}
+
+.logo{
+font-family:'Playfair Display';
+color:white;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.nav-link.active{
+border-bottom:3px solid white;
+padding-bottom:6px;
+}
+
+
+/* HAMBURGER */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.bar{
+width:25px;
+height:3px;
+background:white;
+}
+
+.close-menu{
+display:none;
+color:white;
+font-size:28px;
+cursor:pointer;
+align-self:flex-end;
+}
+
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("../images/header.png");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-family:'Playfair Display';
+font-size:clamp(40px,7vw,80px);
+}
+
+.hero p{
+max-width:500px;
+margin-top:20px;
+font-size:16px;
+line-height:1.6;
+}
+
+.button{
+margin-top:20px;
+padding:14px 28px;
+background:white;
+color:black;
+text-decoration:none;
+font-weight:700;
+border-radius:6px;
+}
+
+
+/* WORK */
+
+#work{
+padding:120px 20px;
+background:white;
+}
+
+#work h2{
+text-align:center;
+color:white;
+font-family:'Playfair Display';
+margin-bottom:60px;
+font-size:36px;
+}
+
+
+/* CAROUSEL */
+
+.carousel-wrapper{
+width:100%;
+display:flex;
+justify-content:center;
+}
+
+.carousel{
+display:flex;
+gap:24px;
+max-width:900px;
+margin:auto;
+}
+
+.project-card{
+width:280px;
+background:white;
+overflow:hidden;
+border-radius:10px;
+transition:0.35s;
+}
+
+.project-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.project-info{
+padding:16px;
+}
+
+.project-info h3{
+font-size:18px;
+margin-bottom:6px;
+}
+
+.project-info p{
+font-size:14px;
+line-height:1.5;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 35px rgba(0,0,0,0.18);
+}
+
+
+/* BUTTON BELOW CAROUSEL */
+
+.view-project-btn{
+display:flex;
+justify-content:center;
+margin-top:40px;
+}
+
+
+/* ABOUT */
+
+.about-me{
+padding:140px 20px;
+background:white;
+color:#006556;
+}
+
+.about-text h2{
+color:#006556;
+}
+
+.about-text h3{
+color:#006556;
+}
+
+.about-text p{
+color:#006556;
+}
+
+.about-container{
+max-width:1100px;
+margin:auto;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:90px;
+}
+
+
+/* FOTO */
+
+.about-photo img{
+width:360px;
+border-radius:20px;
+display:block;
+}
+
+
+/* TEXT AREA */
+
+.about-text{
+max-width:500px;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+
+/* NAME */
+
+.about-text h2{
+font-family:'Playfair Display';
+font-size:40px;
+line-height:1.2;
+}
+
+
+/* ROLE */
+
+.about-text h3{
+font-size:18px;
+opacity:0.8;
+font-weight:500;
+}
+
+
+/* DESC */
+
+.about-text p{
+font-size:16px;
+line-height:1.7;
+opacity:0.9;
+}
+
+
+/* BUTTON ROW */
+
+.social-links{
+display:flex;
+gap:14px;
+}
+
+
+/* SOCIAL BUTTON */
+
+.social-btn{
+padding:10px 16px;
+border:1px solid #006556;
+border-radius:6px;
+color:#006556;
+}
+
+.social-btn:hover{
+background:#006556;
+color:white;
+}
+
+
+/* CV BUTTON */
+
+.cv-btn{
+padding:10px 18px;
+background:#006556;
+color:white;
+}
+
+.cv-btn:hover{
+opacity:0.85;
+}
+
+
+/* CONTACT */
+
+.contact{
+padding:120px 20px;
+text-align:center;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:flex;
+}
+
+.nav-links{
+position:fixed;
+top:0;
+right:-100%;
+height:100vh;
+width:50%;
+background:#111;
+flex-direction:column;
+padding:40px;
+gap:30px;
+transition:0.4s;
+}
+
+.nav-links.active{
+right:0;
+}
+
+.close-menu{
+display:block;
+}
+
+
+/* MOBILE CAROUSEL */
+
+.carousel{
+overflow-x:auto;
+max-width:100%;
+padding:10px 20px;
+}
+
+.project-card{
+min-width:260px;
+flex-shrink:0;
+}
+
+
+/* ABOUT MOBILE */
+
+.about-container{
+flex-direction:column;
+text-align:center;
+gap:40px;
+}
+
+.about-photo img{
+width:240px;
+}
+
+.social-links{
+justify-content:center;
+}
+
+}
+
+/* EXPERTISE SECTION */
+
+.expertise{
+background:white;
+color:#006556;
+padding:140px 20px;
+}
+
+.expertise-intro{
+max-width:700px;
+margin:auto;
+text-align:center;
+margin-bottom:80px;
+}
+
+.expertise-intro p{
+font-size:18px;
+line-height:1.7;
+opacity:0.9;
+}
+
+.expertise-grid{
+max-width:1100px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+
+border-top:1px solid rgba(0,101,86,0.15);
+border-bottom:1px solid rgba(0,101,86,0.15);
+}
+
+.expertise-card{
+padding:60px 40px;
+border-right:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.expertise-card:last-child{
+border-right:none;
+}
+
+.expertise-card h3{
+font-family:'Playfair Display';
+font-size:26px;
+margin-bottom:14px;
+}
+
+.expertise-card p{
+font-size:15px;
+line-height:1.7;
+opacity:0.85;
+}
+
+.expertise-card:hover{
+background:#f4f8f7;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.expertise-grid{
+grid-template-columns:1fr;
+}
+
+.expertise-card{
+border-right:none;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.expertise-card:last-child{
+border-bottom:none;
+}
+
+}
+
+/* EXPERTISE */
+
+.expertise{
+background:#0c0c0c;
+color:white;
+padding:140px 20px;
+}
+
+.expertise-title{
+text-align:center;
+font-family:'Playfair Display';
+font-size:38px;
+margin-bottom:40px;
+}
+
+.expertise-intro{
+max-width:700px;
+margin:auto;
+text-align:center;
+margin-bottom:80px;
+}
+
+.expertise-intro p{
+font-size:18px;
+line-height:1.7;
+opacity:0.9;
+}
+
+.expertise-grid{
+max-width:1100px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+
+border-top:1px solid rgba(255,255,255,0.1);
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.expertise-card{
+padding:60px 40px;
+border-right:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.expertise-card:last-child{
+border-right:none;
+}
+
+.expertise-icon{
+width:48px;
+margin-bottom:20px;
+opacity:0.9;
+}
+
+.expertise-card h3{
+font-family:'Playfair Display';
+font-size:26px;
+margin-bottom:14px;
+}
+
+.expertise-card p{
+font-size:15px;
+line-height:1.7;
+opacity:0.85;
+}
+
+.expertise-card:hover{
+background:#151515;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.expertise-grid{
+grid-template-columns:1fr;
+}
+
+.expertise-card{
+border-right:none;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.expertise-card:last-child{
+border-bottom:none;
+}
+
+}
